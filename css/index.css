@@ -1,10 +1,17 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Noto Sans KR', sans-serif;
+    src:url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    font-weight:400;
+    font-style: normal;
+}
 
 /* 공통 */
 * {
     padding: 0;margin: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 ul,li {
@@ -43,12 +50,9 @@ button{
     background:black;
 }
 .menu_btn .ham span:nth-of-type(2) {
-    width:20px;transition: 0.2s ;
+    width:20px;
 }
-.menu_btn .ham:hover span:nth-of-type(2) {
-    width:30px;
 
-}
 
 
 header{
@@ -58,7 +62,10 @@ header{
     background:gold;
     position: relative;
     display: flex;
-    justify-content: space-between; align-items: center;
+    justify-content: space-between;
+}
+header h1{
+    line-height:150px;
 }
 /* 탑메뉴*/
 .top_menu{
@@ -81,41 +88,48 @@ header{
     position:fixed; left:0; top:0;
     width:100%; height:100%;
     background:#f7f7ef;
+    display:none;
 }
 .side_wrap{
-    width:1284px;
-    margin:0 auto;
+    width:1200px; 
+    margin:8% auto;
     display:flex;
+    align-items: flex-end;
+    display:none;
+    
 }
 .side_inner{
-    border:1px solid gold;
-    width:1000px;
+    width:900px;
+   
 }
 
 .side_inner>li{
     position: relative;
+    width:100%;
 }
 .side_inner>li>a{
     font-size:90px;
     padding:10px;
+    font-weight:900;
 }
 .side_inner span{
     display: block;
-    border-bottom: 2px solid #ff6600;
+    border-bottom: 3px solid #000000;
     position: absolute;
-    width: 0px;
+    width: 70px;
     top:50%; left:50%;
     opacity: 0;
-    transition:1s;
 }
 .side_inner ul{
     position: absolute;
-    left:65%; top:0;
+     z-index:100;
+    left:70%; top:35%;
 }
 .side_inner ul li{
     font-size: 19px;
     margin-left:-50px;
-    opacity: 0;
+    display:none;
+    padding:5px;
 }
 
 .side_inner li a{
@@ -127,8 +141,21 @@ header{
 }
 
 .side_ad{
-    border:1px solid gold;
-    width:200px;
+    width:300px;
 }
-
-
+.side_ad h2{
+    font-size:30px;
+    font-weight:900;
+}
+.side_ad p{
+    font-weight:700;
+}
+.side_ad p:nth-of-type(1){
+    font-size:18px;
+    line-height:28px;
+    color:rgb(50, 50, 50)
+}
+.side_ad p:nth-of-type(2){
+    font-size:17px;
+    color:rgb(100, 100, 100)
+}
