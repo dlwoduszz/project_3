@@ -12,7 +12,6 @@ ul,li {
 }
 
 a {
-    display: block;
     color: black;
     text-decoration: none;
 }
@@ -71,38 +70,65 @@ header{
     padding: 10px; margin:0 10px;
     float:left;
 }
-.top_menu li a{color:gray; }
+.top_menu li a{
+    display:block;
+    color:gray; }
 
+
+
+/* 사이드메뉴*/
 .side_menu{
     position:fixed; left:0; top:0;
     width:100%; height:100%;
-    background:#f7f7ef
+    background:#f7f7ef;
 }
-
-/* 사이드메뉴*/
-.side_menu>ul{
+.side_wrap{
+    width:1284px;
+    margin:0 auto;
+    display:flex;
+}
+.side_inner{
     border:1px solid gold;
     width:1000px;
-    
 }
-.side_menu>ul>li{
-    padding:30px;
+
+.side_inner>li{
     position: relative;
 }
-
-.side_menu ul>li ul{
+.side_inner>li>a{
+    font-size:90px;
+    padding:10px;
+}
+.side_inner span{
+    display: block;
+    border-bottom: 2px solid #ff6600;
     position: absolute;
-    right:100px; top:0;
+    width: 0px;
+    top:50%; left:50%;
+    opacity: 0;
+    transition:1s;
 }
-.side_menu ul>li ul li{
-    display:none;
+.side_inner ul{
+    position: absolute;
+    left:65%; top:0;
 }
-.side_menu li a{
-    transition: 0.3s;
-}
-.side_menu li a:hover{
-color:gold;
+.side_inner ul li{
+    font-size: 19px;
+    margin-left:-50px;
+    opacity: 0;
 }
 
+.side_inner li a{
+    transition: 0.3s;
+    padding:10px;
+}
+.side_inner li a:hover{
+    color:gold;
+}
+
+.side_ad{
+    border:1px solid gold;
+    width:200px;
+}
 
 
