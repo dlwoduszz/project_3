@@ -72,14 +72,17 @@ header h1{
     width:auto;
     top:50%; left:50%; 
     transform: translate(-50%,-50%);
+    display:none;
 }
 .top_menu li{
     padding: 10px; margin:0 10px;
     float:left;
 }
 .top_menu li a{
+    font-weight:bold;
+    font-size:20px;
     display:block;
-    color:gray;
+    color:rgb(226, 226, 226);
 }
 
 

@@ -13,7 +13,6 @@ $(document).ready(function(){
     $('.menu_btn').click(function(){
 
         
-
         $(this).children('p').toggle();
         
         if($(this).children('p').css('display')=='block'){ 
@@ -44,9 +43,13 @@ $(document).ready(function(){
         }
         
     })
-
-
-
+    $(window).scroll(function() {  
+        if($(window).scrollTop()>=900){
+            $('.top_menu').slideDown(500);
+        }else{
+            $('.top_menu').slideUp(500);
+        }
+    })
 
         $('.side_inner>li>a').mouseover(function(){
             if($(this).siblings().is('ul')){

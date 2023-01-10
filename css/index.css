@@ -1,7 +1,7 @@
 .main{
-    width:100%; height:1000px;
+    width:100%; padding-bottom:100px;
     overflow:hidden;
-    border-bottom:1px solid red;
+  
 }
 
 /* 슬라이드버튼 */
@@ -28,14 +28,17 @@
     height:700px;
     float:left;
     position: relative;
-    
-    
 }
+.page{
+    position:absolute; z-index:20;
+    top:50%; right:2%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    font-size:30px;
+    }
 .slide_inner{
     width:1350px; height:400px;
     position: absolute; z-index:2;
     left:50%; bottom:0;
-    /* background:skyblue; */
     transform: translate(-50%,0%);
 }
 
@@ -205,4 +208,96 @@
 .search span img{
     width:40%;
     left:50%; right:50%;
-    transform: translate(70%,70%);}
+    transform: translate(70%,70%);
+}
+
+/* section */
+section{
+    width:1280px; margin:0 auto;
+    padding:100px 0;
+    border:1px solid red;
+}
+section h2{
+    font-size:65px; letter-spacing: -1px;
+}
+section p{
+    font-size:25px; line-height:40px;
+    font-weight:500; letter-spacing: -2px;
+}
+/* section1 */
+.section1 {
+    text-align:center;
+    border:1px solid red;
+}
+.section1 h2{
+    opacity:0;
+}
+.section1>p{
+    margin:50px 0 100px 0;
+    opacity:0;
+}
+.section1 .btn{
+    cursor:pointer;
+    display: inline-block;
+    padding:30px;
+    opacity:0;
+}
+.section1 .btn div{
+    overflow: hidden;
+    height:40px;
+}
+.section1 .btn p {
+    font-size:20px;
+    font-weight:bold;
+    position: relative;
+}
+.section1 .btn p:nth-of-type(2){
+    color:gold;
+}
+.section1 .btn span{
+    display:block; margin:0 auto;
+    width:40px;
+    border-bottom:2px solid black;
+}
+
+
+/* section2 */
+.section2 {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.section2 .imgbox{
+    width:40%; height:600px; overflow: hidden;
+    background:gold;
+    position:relative;
+}
+.section2 .imgbox img{
+    position:absolute;
+    left:0; top:0;
+    height:100%;
+}
+.section2 .imgbox img:not(:first-child){
+    display:none;
+}
+.section2 ul{
+    width:50%; height:600px;
+}
+.section2 ul li{
+    border-bottom:2px solid #e8e8e8;
+}
+.section2 ul h3{
+    font-size:60px; padding:10px 0;
+    font-weight:bold;
+    color:#e8e8e8;
+    cursor: pointer;
+}
+.section2 ul h3:not(:first-child){
+    margin:0 50px;
+}
+.section2 ul p{
+    padding-bottom:30px;
+    display:none;
+}
+
+
