@@ -164,6 +164,64 @@ header h1{
     color:rgb(100, 100, 100);
 }
 
-#container{
-    width:100%; height:5000px;
+
+
+/* 푸터 */
+footer {
+    width: 100%; margin-top:100px; padding: 100px 50px 100px 50px;
+    height: 500px;
+    background: #f4f0e8;
+    position: relative;
+}
+footer h1{
+    padding:20px 0;
+}
+
+footer select{
+    background:none; border:none;
+    border-bottom:3px solid black;
+    font-size:20px;
+    width:300px;
+    padding:10px 0;
+}
+footer select .op_main{
+    display:none;
+}
+footer a {
+    display: block;
+}
+footer>ul{
+    position: absolute;
+    left:35%;
+}
+
+footer>ul>li {
+    float: left;
+    margin-right:60px;
+}
+
+footer>ul>li>a {
+    font-size: 30px;
+    font-weight:bold;
+    padding:20px 0;
+}
+
+footer>ul>li>ul a {
+    font-size: 20px;
+    font-weight:500;
+    padding:3px 0;
+}
+footer>div{
+    display:flex;
+    justify-content: space-between;
+}
+footer .location a{
+    font-size:20px; font-weight:bold; color:gold;
+    padding:20px 40px;
+    border:5px solid white; border-radius: 40px;
+
+}
+footer p {
+    position: absolute;
+    left:35%; bottom:100px;
 }

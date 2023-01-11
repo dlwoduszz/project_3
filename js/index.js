@@ -43,25 +43,35 @@ $(document).ready(function(){
     })
 
 
-    // section1 scroll시 fade 효과
+    // section scroll시 fade 효과
     $(window).scroll(function() {  
-        $('h1').text($(window).scrollTop())
+        var scroll=$(window).scrollTop()
+        $('h1').text(scroll);
         if($(window).scrollTop()===0){
             $('h1').text('DEERS')
         }
         
-        if($(window).scrollTop()>=200){
+        if(scroll>=200){
             $('.section1 h2').css({'margin-top':'100px'});
             $('.section1 h2').animate({'margin-top':'0px','opacity':'1'},500);
         }
-        if($(window).scrollTop()>=700){
+        if(scroll>=700){
             $('.section1>p').css({'margin-top':'150px'});
             $('.section1>p').animate({'margin-top':'50px','opacity':'1'},600);
         }
-        if($(window).scrollTop()>=760){
+        if(scroll>=760){
             $('.section1 .btn').css({'margin-top':'100px'});
             $('.section1 .btn').animate({'margin-top':'0px','opacity':'1'},500);
         }
+        if(scroll>=1100){
+            $('.section2 .imgbox').animate({'opacity':'1'},1500);
+            $('.section2 ul').css({'margin-top':'150px'});
+            $('.section2 ul').animate({'margin-top':'0px','opacity':'1'},600);
+        }
+
+
+
+
     });  
     
 
@@ -79,22 +89,31 @@ $(document).ready(function(){
 
     })
 
+
+
     // section2 비전 토글 효과
-    let count1=0;
+    var count1=0
     $('.section2 h3').click(function(){
-        $(this).siblings('p').slideToggle();
-        // if($(this).siblings('p').css('display')=='block'){
-        //     $(this).css({'color':'gold'})
-        // }else {
-        //     $(this).css({'color':'#e8e8e8'})
-        // }
+        $('.section2 h3').siblings('p').stop().slideUp();
+        $(this).siblings('p').stop().slideToggle();
+        $('.section2 h3').css({'color':'#e8e8e8'});
+        $(this).css({'color':'gold'});
         
-        count1++;
-        console.log(count1);
-        if(count1%2==0){
-            $(this).css({'color':'gray'})
-        }else{
-            $(this).css({'color':'gold'})
-        }
+        // count1++;
+        // if(count1%2==0){
+        //     $(this).css({'color':'#e8e8e8'});
+        // }else{
+        //     $(this).css({'color':'gold'}); 
+        // }
+
+        
+        // if($(this).siblings('p').is(':visible') == true){
+        //     $(this).css({'color':'gold'});
+        // }else{
+        //     $(this).css({'color':'#e8e8e8'});
+        // }
+
     })
+
+
 })
